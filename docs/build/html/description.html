@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Description &mdash; meson_mass 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> meson_mass
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Description</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">meson_mass</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Description</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/description.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="description">
+<h1>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>To describe the mass of a generic heavy-light pseudoscalar meson
+simulated on a lattice with lattice spacing <em>a</em> and volume <em>V</em>,
+the Fermilab Lattice, MILC, and TUMQCD uses a function as</p>
+<div class="math notranslate nohighlight">
+\[M_{H_x} (\{m_h, m_x\}, \{m'_l, m'_l, m'_s, m'_c\}, \{a, V\};
+         \{p_1,\cdots,p_{67}\}),\]</div>
+<p>which takes as inputs three sets of values and contains 67 parameters.
+The inputs are the simulation masses of the valence heavy and light quarks
+(in the first braces), the simulation masses of four flavors of sea quarks
+(in the second braces), and the lattice spacing and volume (in the third
+braces).
+Note that the lattice simulations are usually performed at the isospin limit,
+where the masses of two light quarks (up and down quarks) are equal.
+We use the term <em>light</em> quark to call these two quarks at the isospin limit
+and <span class="math notranslate nohighlight">\(m_l\)</span> to denote their masses.</p>
+<p>The 67 parameters of <span class="math notranslate nohighlight">\(M_{H_x}\)</span> are determined statistically by fitting
+the function to lattice-QCD data.
+The continuum and infinite-volume limits of the function are then obtained
+by setting <span class="math notranslate nohighlight">\(a = 0\)</span> and <span class="math notranslate nohighlight">\(V = \infty\)</span>.</p>
+<p>One can use the function <span class="math notranslate nohighlight">\(M_{H_x}\)</span> to explore how a heavy-light meson
+mass depends on the masses of its components.
+For applications in ChPT, one may be interested to fix the heavy and strange
+quark masses and vary the light quark mass.
+This reduces the function <span class="math notranslate nohighlight">\(M_{H_x}\)</span> to a one-variable function,
+which is still relatively complicated because of non-analytic terms stemming
+from chiral perturbation theory; see <a class="reference external" href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.98.054517">Ref1</a> and <a class="reference external" href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.97.034503">Ref2</a> for details.
+(Note that the non-analytic terms are very small in practice.)
+When quark masses are neither too big nor too small, the nonanalytic terms
+can be replaced with polynomials.</p>
+<p>This module provides four (cubic) polynomial functions to describe the masses
+of <span class="math notranslate nohighlight">\(D, D_s, B\)</span> and <span class="math notranslate nohighlight">\(B_s\)</span> mesons in terms of the light quark mass
+in units of the strange quark mass, i.e. in terms of <span class="math notranslate nohighlight">\(x = m_l/m_s\)</span>.
+(As said above, the strange, charm, and bottom masses are set to their physical
+values.)
+The functions take <span class="math notranslate nohighlight">\(x = m_l/m_s\)</span> as input and return the mass of
+the corresponding mesons (in MeV) and their one-sigma uncertainties.
+The pacakge <a class="reference external" href="https://github.com/gplepage/gvar">gvar</a> is used to handle the values and their errors.
+If an array of light quark masses (in units of strange mass) are provided,
+each function returns an array of <a class="reference external" href="https://github.com/gplepage/gvar">gvar</a> variables that contains
+the correlation between variables.</p>
+<p>The following figure illustrates the <span class="math notranslate nohighlight">\(D, D_s, B\)</span> and <span class="math notranslate nohighlight">\(B_s\)</span> meson
+masses against <span class="math notranslate nohighlight">\(x = m_l/m_s\)</span>:</p>
+<img alt="_images/observation_vs_polyfit.jpeg" src="_images/observation_vs_polyfit.jpeg" />
+<p>The error bars illustrate the results obtained from the analysis of the project
+on <a class="reference external" href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.98.054517">Ref1</a>, and the error bands are derived from the effective formulas of this
+package. The domain of validity of the functions are restricted to
+<span class="math notranslate nohighlight">\(x\in[0.02, 0.5]\)</span>.</p>
+<p>For the <span class="math notranslate nohighlight">\(D\)</span> system, e.g. with quark mass ratios 0.1, 0.2, and
+0.3, one can simply use:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">meson_mass</span> <span class="kn">import</span> <span class="n">Model</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Model</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">array</span><span class="p">([</span><span class="mf">1876.81</span><span class="p">(</span><span class="mi">97</span><span class="p">),</span> <span class="mf">1890.8</span><span class="p">(</span><span class="mf">1.3</span><span class="p">),</span> <span class="mf">1904.6</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where output is in MeV and provided as an array of <a class="reference external" href="https://github.com/gplepage/gvar">gvar</a> variables.
+(One can use <cite>gvar.mean(…)</cite> <cite>gvar.sdev(…)</cite> to access the mean and one-sigma
+error in the output.)
+Similarly, for <span class="math notranslate nohighlight">\(D_s, B\)</span> and <span class="math notranslate nohighlight">\(B_s\)</span> systems, we have</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Model</span><span class="p">(</span><span class="s1">&#39;Ds&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">array</span><span class="p">([</span><span class="mf">1968.87</span><span class="p">(</span><span class="mi">25</span><span class="p">),</span> <span class="mf">1971.87</span><span class="p">(</span><span class="mi">46</span><span class="p">),</span> <span class="mf">1975.11</span><span class="p">(</span><span class="mi">94</span><span class="p">)],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Model</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">array</span><span class="p">([</span><span class="mf">5288.2</span><span class="p">(</span><span class="mf">1.3</span><span class="p">),</span> <span class="mf">5302.7</span><span class="p">(</span><span class="mf">1.6</span><span class="p">),</span> <span class="mf">5316.9</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Model</span><span class="p">(</span><span class="s1">&#39;Bs&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">array</span><span class="p">([</span><span class="mf">5369.82</span><span class="p">(</span><span class="mi">41</span><span class="p">),</span> <span class="mf">5374.25</span><span class="p">(</span><span class="mi">83</span><span class="p">),</span> <span class="mf">5378.9</span><span class="p">(</span><span class="mf">1.4</span><span class="p">)],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Command line inteface is available too:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ meson_mass.py --model D  0.1 0.2 0.3
+$ [1876.81(97) 1890.8(1.3) 1904.6(1.5)]
+$
+$ meson_mass.py --model Ds  0.1 0.2 0.3
+$ [1968.87(25) 1971.87(46) 1975.11(94)]
+$
+$ meson_mass.py --model B  0.1 0.2 0.3
+$ [5288.2(1.3) 5302.7(1.6) 5316.9(2.0)]
+$
+$ meson_mass.py --model Bs  0.1 0.2 0.3
+$ [5369.82(41) 5374.25(83) 5378.9(1.4)]
+</pre></div>
+</div>
+<p>The parameters of this module correspond to a QCD-only world;
+in lattice simulations of heavy-light mesons, the QED effects are not included.
+To tune the charm and bottom quark masses, the analysis uses the experimental
+values of <span class="math notranslate nohighlight">\(D_s\)</span> and <span class="math notranslate nohighlight">\(B_s\)</span> masses, but it subtracts their
+QED contributions in a specific scheme.
+To compare the results of this module with experimental values, which include
+QED effects, an option is provided to adjust the outputs depending on
+the charges of the heavy and light components of the meson.
+For the masses of <span class="math notranslate nohighlight">\(D_s\)</span> and <span class="math notranslate nohighlight">\(B_s\)</span> mesons, we have</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m_ud</span> <span class="o">=</span> <span class="mf">0.0368</span>  <span class="c1"># average of u and d mases in unit of the strange mass</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Model</span><span class="p">(</span><span class="s1">&#39;Ds&#39;</span><span class="p">,</span> <span class="n">QCD_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">e_heavy</span><span class="o">=</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="n">e_light</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">ml</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mf">1968.27</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Model</span><span class="p">(</span><span class="s1">&#39;Bs&#39;</span><span class="p">,</span> <span class="n">QCD_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">e_heavy</span><span class="o">=-</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="n">e_light</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">ml</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mf">5366.82</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>These results are equal to the experimental masses
+<span class="math notranslate nohighlight">\(M_{D_s} = 1968.27(10)\)</span> and <span class="math notranslate nohighlight">\(M_{B_s} = 5366.82(22)\)</span>
+that are used as inputs to fix the charm and bottom quark masses, respectively.
+(It is not surprising that this module gives such a precise value for these two
+quantities.)</p>
+<p>As a concluding remark, it should be emphasized that the effective formula
+are expected to be used at <span class="math notranslate nohighlight">\(x\in[0.02, 0.5]\)</span>.
+The results of the code outside the given domain cannot be trusted.
+For instance, evaluating the <span class="math notranslate nohighlight">\(D\)</span> mass at the chiral limit, one obtains:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ meson_mass.py --model D 0
+$ 1862.45(38)
+</pre></div>
+</div>
+<p>while the <em>correct</em> value reported in eq (5.31) <a class="reference external" href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.98.054517">Ref1</a> is 1862.3(1.3) MeV.
+This rapid increase of uncertainty indicates the importance of non-analytic
+terms in approaching the chiral limit.</p>
+</div></blockquote>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Javad Komijani.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

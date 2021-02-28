@@ -1,0 +1,5 @@
+__pycache__
+todo
+comments_on_rst_files.txt
+docs/build/latex/
+origin.rst

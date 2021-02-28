@@ -1,0 +1,11 @@
+To install:
+    pip3 install . --user
+
+To uninstall:
+    pip3 uninstall meson_mass
+
+For testing simply use:
+    nosetests
+
+In case you do not want to install the package,
+use src/meson_mass.py as a regular python module, which can be executable too.
